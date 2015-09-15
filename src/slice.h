@@ -5,7 +5,6 @@
 
 typedef struct {
     byte *elem;
-    void *root;
     uint isize;
     uint len;
     uint cap;
@@ -23,6 +22,6 @@ Slice Slice_Copy(Slice *s);
 Error Slice_Append(Slice *s, void *elem, uint count);
 Slice Slice_Join(Slice *s, Slice *other);
 void* Slice_At(Slice *s, uint i);
-void* Slice_Root(Slice *s);
+void* Slice_Array(Slice *s);
 
 #endif // TRIBBLE_SLICE_H_
