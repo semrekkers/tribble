@@ -31,6 +31,8 @@ void _panic(const char *f, const uint l, Error err);
 #define check(c)
 #endif
 
+#include "error.h"
+
 #define make(t, c) malloc(sizeof(t) * (c))
 
 #endif // TRIBBLE_H_
