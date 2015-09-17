@@ -10,9 +10,6 @@ typedef struct {
     uint cap;
 } Slice;
 
-#define len(s) ((uint)(s)->len)
-#define cap(s) ((uint)(s)->cap)
-
 Slice _Slice_New(uint isize, void *data, uint start, uint end);
 #define Slice_New(t,d,s,e) _Slice_New(sizeof(t),d,s,e)
 
